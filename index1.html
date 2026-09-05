@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Year of Us ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:Georgia, serif;
+    background:
+      radial-gradient(circle at top,#5d183d,#170914 55%,#080509);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.page{
+    width:100%;
+    max-width:480px;
+    margin:auto;
+    padding:25px 20px 50px;
+    text-align:center;
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:18px;
+    opacity:.7;
+    animation:float 7s linear infinite;
+    pointer-events:none;
+}
+
+.heart:nth-child(1){left:10%;animation-delay:1s}
+.heart:nth-child(2){left:30%;animation-delay:3s}
+.heart:nth-child(3){left:55%;animation-delay:0s}
+.heart:nth-child(4){left:80%;animation-delay:2s}
+
+@keyframes float{
+    0%{transform:translateY(0) scale(.7);opacity:0}
+    20%{opacity:.8}
+    100%{transform:translateY(-110vh) scale(1.3);opacity:0}
+}
+
+/* Opening */
+.opening{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.small{
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    opacity:.7;
+}
+
+h1{
+    font-size:45px;
+    margin:18px 0 8px;
+    line-height:1;
+    background:linear-gradient(90deg,#fff,#ffb6d9,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:glow 3s ease-in-out infinite;
+}
+
+@keyframes glow{
+    50%{filter:drop-shadow(0 0 15px #ff5b9d)}
+}
+
+.date{
+    font-size:15px;
+    letter-spacing:2px;
+    color:#ffc1da;
+}
+
+.line{
+    width:70px;
+    height:1px;
+    background:#ff75a9;
+    margin:25px auto;
+}
+
+.quote{
+    font-size:17px;
+    line-height:1.8;
+    color:#f6dce7;
+}
+
+/* Story Card */
+.card{
+    margin-top:30px;
+    padding:25px 20px;
+    border:1px solid rgba(255,150,190,.25);
+    border-radius:25px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.card h2{
+    font-size:24px;
+    margin-bottom:18px;
+    color:#ffb3d0;
+}
+
+.card p{
+    font-family:Arial,sans-serif;
+    font-size:15px;
+    line-height:1.9;
+    color:#eee;
+}
+
+/* Timeline */
+.timeline{
+    margin-top:40px;
+}
+
+.timeline h2{
+    color:#ffb3d0;
+    margin-bottom:25px;
+}
+
+.event{
+    position:relative;
+    padding:0 0 28px 25px;
+    text-align:left;
+    border-left:1px solid rgba(255,120,170,.5);
+}
+
+.event::before{
+    content:"❤️";
+    position:absolute;
+    left:-11px;
+    top:-3px;
+    font-size:15px;
+    background:#170914;
+}
+
+.event strong{
+    display:block;
+    color:#ffabc9;
+    margin-bottom:7px;
+}
+
+.event p{
+    font-family:Arial,sans-serif;
+    color:#ddd;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* Final */
+.final{
+    margin-top:30px;
+    padding:30px 18px;
+}
+
+.final .big{
+    font-size:27px;
+    line-height:1.5;
+}
+
+.forever{
+    margin-top:20px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    letter-spacing:2px;
+    color:#ff9fc4;
+}
+
+footer{
+    margin-top:35px;
+    font-size:12px;
+    opacity:.5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="heart">❤️</div>
+<div class="heart">💗</div>
+<div class="heart">💕</div>
+<div class="heart">❤️</div>
+
+<div class="page">
+
+<section class="opening">
+
+    <div class="small">Our Story Begins</div>
+
+    <h1>One Year<br>of Us</h1>
+
+    <div class="date">27 • 05 • 2025</div>
+
+    <div class="line"></div>
+
+    <div class="quote">
+        “Oka simple chat tho start ayina journey…<br>
+        ippudu naa life lo most beautiful memory.”
+    </div>
+
+    <div style="margin-top:35px;font-size:13px;opacity:.6;">
+        ↓ scroll our story ↓
+    </div>
+
+</section>
+
+
+<section class="card">
+
+    <h2>Our First Chat 💌</h2>
+
+    <p>
+        27/05/2025…<br><br>
+
+        Aa roju just oka normal chat anukunna.
+        Kaani aa small conversation,
+        slow ga oka beautiful relationship ki
+        first step ayyindi.
+        <br><br>
+
+        Oka chat friendship ayyindi…
+        friendship attachment ayyindi…
+        attachment love ayyindi.
+        <br><br>
+
+        Eppudu manam ila close avutham ani
+        appudu asalu imagine cheyyaledu.
+    </p>
+
+</section>
+
+
+<section class="timeline">
+
+    <h2>One Year of Memories ✨</h2>
+
+    <div class="event">
+        <strong>The Beginning</strong>
+        <p>
+            Mana first chat… oka small beginning,
+            kani naa heart lo unforgettable date.
+        </p>
+    </div>
+
+    <div class="event">
+        <strong>Love ❤️</strong>
+        <p>
+            Roju roju ki feelings deeper ayyayi.
+            Okarini okaram special ga feel cheskunnam.
+        </p>
+    </div>
+
+    <div class="event">
+        <strong>Care 🤍</strong>
+        <p>
+            Nenu thanani care chesinattu,
+            than kuda nannu genuine ga care chesindi.
+        </p>
+    </div>
+
+    <div class="event">
+        <strong>Trust 🔐</strong>
+        <p>
+            Mana relationship ki strongest foundation
+            love tho paatu trust.
+        </p>
+    </div>
+
+    <div class="event">
+        <strong>One Year 🥹</strong>
+        <p>
+            365 days of conversations,
+            memories, care, love and understanding.
+        </p>
+    </div>
+
+</section>
+
+
+<section class="final">
+
+    <div class="big">
+        “Nuvvu naa life lo vachina date
+        oka date matrame kaadu…”
+    </div>
+
+    <div class="line"></div>
+
+    <div class="quote">
+        Aa roju nunchi naa life lo
+        “Nenu” kanna<br>
+        <b>“Manam” ane feeling start ayyindi. ❤️</b>
+    </div>
+
+    <div class="forever">
+        ONE YEAR DOWN • MANY MEMORIES TO GO
+    </div>
+
+</section>
+
+<footer>
+    Made with love ❤️
+</footer>
+
+</div>
+
+</body>
+</html>
