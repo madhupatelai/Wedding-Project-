@@ -441,6 +441,61 @@ body{
 }
 
 /* =====================================================
+   LOVE STORY BUTTON
+===================================================== */
+
+.story-section{
+    margin-top:25px;
+    padding:15px;
+    background:rgba(216,172,93,.08);
+    border:1px solid rgba(216,172,93,.3);
+    border-radius:12px;
+}
+
+.story-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:12px 28px;
+    border:2px solid #e8bd6b;
+    border-radius:30px;
+
+    background:rgba(232,189,107,.12);
+    color:#f5dfad;
+
+    font-size:14px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    font-weight:bold;
+    cursor:pointer;
+    transition:all .3s ease;
+    text-decoration:none;
+}
+
+.story-btn:hover{
+    background:#e8bd6b;
+    color:#28101a;
+    transform:translateY(-3px);
+    box-shadow:0 12px 28px rgba(232,189,107,.35);
+}
+
+.story-btn:active{
+    transform:translateY(-1px);
+}
+
+.story-icon{
+    font-size:18px;
+    animation:heartPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes heartPulse{
+    0%, 100%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+}
+
+/* =====================================================
    ITINERARY SECTION
 ===================================================== */
 
@@ -763,6 +818,11 @@ body{
     .gallery-item{
         font-size:32px;
     }
+
+    .story-btn{
+        padding:10px 20px;
+        font-size:12px;
+    }
 }
 </style>
 </head>
@@ -884,6 +944,17 @@ body{
 
             </a>
 
+        </div>
+
+        <!-- =====================================================
+             LOVE STORY BUTTON
+        ===================================================== -->
+
+        <div class="story-section">
+            <a href="love-story.html" class="story-btn">
+                <span class="story-icon">💕</span>
+                Our Love Story
+            </a>
         </div>
 
         <!-- =====================================================
