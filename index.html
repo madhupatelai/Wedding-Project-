@@ -19,7 +19,7 @@ html,body{
 }
 
 body{
-    overflow:hidden;
+    overflow-x:hidden;
     font-family:
         "Noto Serif Telugu",
         "Nirmala UI",
@@ -224,10 +224,12 @@ body{
 .card{
     width:100%;
     max-width:440px;
-    min-height:680px;
+    min-height:auto;
+    max-height:90vh;
 
     position:relative;
-    overflow:hidden;
+    overflow-y:auto;
+    overflow-x:hidden;
 
     padding:40px 27px;
 
@@ -423,6 +425,7 @@ body{
     background:rgba(216,172,93,.08);
 
     transition:.3s;
+    cursor:pointer;
 }
 
 .map:hover{
@@ -430,7 +433,152 @@ body{
     color:#28101a;
 
     transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(216,172,93,.3);
 }
+
+.map:active{
+    transform:translateY(-1px);
+}
+
+/* =====================================================
+   ITINERARY SECTION
+===================================================== */
+
+.itinerary-section{
+    margin-top:30px;
+    padding-top:25px;
+    border-top:1px solid rgba(216,172,93,.3);
+}
+
+.itinerary-title{
+    color:#e8bd6b;
+    font-size:16px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.event-item{
+    margin-bottom:18px;
+    padding:12px;
+    background:rgba(216,172,93,.05);
+    border-left:3px solid #e8bd6b;
+    border-radius:4px;
+    transition:all .3s ease;
+}
+
+.event-item:hover{
+    background:rgba(216,172,93,.12);
+    transform:translateX(5px);
+}
+
+.event-time{
+    color:#e8bd6b;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.event-name{
+    color:#f5e5c3;
+    font-size:14px;
+    margin-top:4px;
+}
+
+/* =====================================================
+   PHOTO GALLERY SECTION
+===================================================== */
+
+.gallery-section{
+    margin-top:30px;
+    padding-top:25px;
+    border-top:1px solid rgba(216,172,93,.3);
+}
+
+.gallery-title{
+    color:#e8bd6b;
+    font-size:16px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.gallery-item{
+    width:100%;
+    aspect-ratio:1;
+    border:2px solid rgba(216,172,93,.4);
+    border-radius:12px;
+    overflow:hidden;
+    background:rgba(216,172,93,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.gallery-item:hover{
+    border-color:#e8bd6b;
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(232,189,107,.3);
+}
+
+/* =====================================================
+   MUSIC PLAYER
+===================================================== */
+
+.music-section{
+    margin-top:25px;
+    padding:15px;
+    background:rgba(216,172,93,.08);
+    border-radius:12px;
+}
+
+.music-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:10px 20px;
+    border:1px solid #d8ac5d;
+    border-radius:25px;
+
+    background:rgba(216,172,93,.1);
+    color:#f5dfad;
+
+    font-size:13px;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.music-toggle:hover{
+    background:#d8ac5d;
+    color:#28101a;
+    transform:scale(1.05);
+}
+
+.music-icon{
+    font-size:16px;
+    animation:musicPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse{
+    0%, 100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+
+/* =====================================================
+   HEARTS / PARTICLES
+===================================================== */
 
 .heart{
     margin-top:17px;
@@ -442,7 +590,9 @@ body{
 }
 
 .footer{
-    margin-top:9px;
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid rgba(216,172,93,.2);
 
     color:#cdb78d;
 
@@ -590,8 +740,7 @@ body{
     }
 
     .card{
-        min-height:650px;
-        padding:34px 20px;
+        padding:28px 18px;
     }
 
     .open-names{
@@ -604,6 +753,15 @@ body{
 
     .main-title{
         font-size:27px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .gallery-item{
+        font-size:32px;
     }
 }
 </style>
@@ -728,6 +886,59 @@ body{
 
         </div>
 
+        <!-- =====================================================
+             ITINERARY SECTION
+        ===================================================== -->
+
+        <div class="itinerary-section">
+            <div class="itinerary-title">📅 Wedding Itinerary</div>
+
+            <div class="event-item">
+                <div class="event-time">🌅 06:00 AM</div>
+                <div class="event-name">Haldi Ceremony</div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-time">☀️ 09:00 AM</div>
+                <div class="event-name">Mehendi Celebration</div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-time">✨ 11:11 AM</div>
+                <div class="event-name">Wedding Ceremony</div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-time">🍽️ 01:00 PM</div>
+                <div class="event-name">Reception & Lunch</div>
+            </div>
+        </div>
+
+        <!-- =====================================================
+             PHOTO GALLERY SECTION
+        ===================================================== -->
+
+        <div class="gallery-section">
+            <div class="gallery-title">📸 Memories</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">💑</div>
+                <div class="gallery-item">👰</div>
+                <div class="gallery-item">🤵</div>
+                <div class="gallery-item">💍</div>
+            </div>
+        </div>
+
+        <!-- =====================================================
+             MUSIC PLAYER
+        ===================================================== -->
+
+        <div class="music-section">
+            <button class="music-toggle" onclick="toggleMusic()">
+                <span class="music-icon">🎵</span>
+                Play Wedding Music
+            </button>
+        </div>
+
         <div class="heart">
             ♥
         </div>
@@ -766,6 +977,32 @@ body{
 <div class="particle" style="left:68%;animation-duration:9s;"></div>
 <div class="particle" style="left:82%;animation-duration:13s;"></div>
 
+<script>
+let isPlaying = false;
+let audio = null;
+
+function toggleMusic() {
+    const btn = document.querySelector('.music-toggle');
+    
+    if (!audio) {
+        // Create audio element with a sample wedding music URL
+        audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+        audio.loop = true;
+    }
+    
+    if (isPlaying) {
+        audio.pause();
+        btn.innerHTML = '<span class="music-icon">🎵</span> Play Wedding Music';
+        isPlaying = false;
+    } else {
+        audio.play().catch(err => {
+            alert('Unable to play music. Please check the URL.');
+        });
+        btn.innerHTML = '<span class="music-icon">⏸️</span> Stop Music';
+        isPlaying = true;
+    }
+}
+</script>
 
 </body>
   </html>
