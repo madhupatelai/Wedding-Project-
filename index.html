@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>Madhu ❤️ Nandhu Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    font-family:"Noto Serif Telugu",serif;
+    background:#250000;
+    color:#ffe7a3;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.invitation{
+    width:100%;
+    height:100dvh;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 50% 45%,
+        rgba(255,190,60,.18),
+        transparent 25%),
+        linear-gradient(145deg,#210000,#570600,#210000);
+}
+
+/* Gold border */
+
+.invitation::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(255,213,104,.65);
+    border-radius:16px;
+    pointer-events:none;
+    z-index:20;
+}
+
+.invitation::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border:1px solid rgba(255,213,104,.2);
+    border-radius:12px;
+    pointer-events:none;
+    z-index:20;
+}
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:45px 30px;
+
+    opacity:0;
+    visibility:hidden;
+    transform:scale(1.06);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.4s ease,
+        visibility 1.2s;
+}
+
+.screen.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+}
+
+.content{
+    width:100%;
+    max-width:430px;
+    position:relative;
+    z-index:5;
+}
+
+/* =========================
+   DECORATION
+========================= */
+
+.ornament{
+    position:absolute;
+    width:180px;
+    height:180px;
+    border:1px solid rgba(255,210,100,.15);
+    border-radius:50%;
+    animation:rotate 18s linear infinite;
+}
+
+.ornament::before,
+.ornament::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border:1px solid rgba(255,210,100,.12);
+    border-radius:50%;
+}
+
+.ornament::after{
+    inset:38px;
+}
+
+.top{
+    top:-90px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.bottom{
+    bottom:-90px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+@keyframes rotate{
+    from{transform:translateX(-50%) rotate(0deg)}
+    to{transform:translateX(-50%) rotate(360deg)}
+}
+
+/* =========================
+   TEXT ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+}
+
+.active .reveal{
+    animation:revealText 1.4s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes revealText{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.delay1{animation-delay:.25s!important}
+.delay2{animation-delay:.55s!important}
+.delay3{animation-delay:.85s!important}
+.delay4{animation-delay:1.15s!important}
+
+/* =========================
+   GOLD TEXT
+========================= */
+
+.gold{
+    color:#ffd76b;
+    text-shadow:
+        0 0 10px rgba(255,190,50,.35),
+        0 2px 10px rgba(0,0,0,.6);
+}
+
+.big{
+    font-size:clamp(30px,9vw,48px);
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.medium{
+    font-size:clamp(24px,7vw,35px);
+}
+
+.small{
+    font-size:18px;
+    line-height:2;
+}
+
+/* =========================
+   SCREEN 1
+========================= */
+
+.s1-text{
+    font-size:clamp(25px,7vw,38px);
+    line-height:1.8;
+    font-weight:600;
+}
+
+/* =========================
+   SCREEN 2
+========================= */
+
+.ganesha{
+    font-size:65px;
+    margin-bottom:25px;
+    filter:drop-shadow(0 0 15px rgba(255,190,50,.5));
+}
+
+.ganesha-text{
+    font-size:28px;
+    font-weight:600;
+}
+
+/* =========================
+   SCREEN 3
+========================= */
+
+.quote{
+    font-size:21px;
+    line-height:2.15;
+    color:#ffe8b0;
+    font-weight:500;
+}
+
+/* =========================
+   SCREEN 4
+========================= */
+
+.flower{
+    font-size:55px;
+    margin-bottom:18px;
+    animation:flowerFloat 3s ease-in-out infinite;
+}
+
+@keyframes flowerFloat{
+    50%{transform:translateY(-8px)}
+}
+
+/* =========================
+   SCREEN 5
+========================= */
+
+.label{
+    font-size:18px;
+    color:#dcbf79;
+    margin-bottom:5px;
+}
+
+.name{
+    font-family:Georgia,serif;
+    font-size:45px;
+    font-weight:bold;
+    letter-spacing:5px;
+    color:#ffd76b;
+    text-shadow:0 0 15px rgba(255,190,50,.3);
+}
+
+.amp{
+    font-family:cursive;
+    font-size:40px;
+    margin:12px 0;
+    color:#fff0bd;
+}
+
+/* =========================
+   SCREEN 6
+========================= */
+
+.date{
+    font-size:25px;
+    line-height:2;
+    font-weight:600;
+}
+
+.time{
+    margin-top:12px;
+    font-size:22px;
+    color:#ffe5a0;
+}
+
+/* =========================
+   SCREEN 7
+========================= */
+
+.location{
+    font-size:21px;
+    line-height:1.9;
+}
+
+.final{
+    margin-top:30px;
+    font-size:18px;
+    line-height:1.9;
+    color:#ffe5a0;
+}
+
+/* =========================
+   PETALS
+========================= */
+
+.petal{
+    position:absolute;
+    top:-30px;
+    width:9px;
+    height:14px;
+    border-radius:80% 20% 80% 20%;
+    background:#eab45a;
+    opacity:.7;
+    animation:fall linear infinite;
+    z-index:2;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-40px) rotate(0deg);
+        opacity:0;
+    }
+    10%{opacity:.8}
+    100%{
+        transform:translateY(110vh) translateX(80px) rotate(420deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   DIYA
+========================= */
+
+.diya{
+    margin:0 auto 25px;
+    width:55px;
+    height:28px;
+    background:#b87320;
+    border-radius:0 0 35px 35px;
+    position:relative;
+    box-shadow:0 5px 20px rgba(255,160,20,.3);
+}
+
+.flame{
+    position:absolute;
+    left:50%;
+    top:-35px;
+    width:17px;
+    height:30px;
+    transform:translateX(-50%);
+    background:#ffd85a;
+    border-radius:50% 50% 50% 0;
+    transform-origin:bottom;
+    animation:flame 1s infinite alternate;
+    box-shadow:0 0 18px #ffb000;
+}
+
+@keyframes flame{
+    to{
+        transform:translateX(-50%) rotate(6deg) scale(1.08);
+    }
+}
+
+/* =========================
+   LOCATION BUTTON
+========================= */
+
+.map-btn{
+    display:inline-block;
+    margin-top:22px;
+    padding:12px 24px;
+    border:1px solid #e6bb58;
+    border-radius:30px;
+    color:#ffe5a0;
+    text-decoration:none;
+    font-size:16px;
+    background:rgba(255,190,50,.08);
+    transition:.3s;
+}
+
+.map-btn:active{
+    transform:scale(.95);
+    background:rgba(255,190,50,.18);
+}
+
+/* =========================
+   TAP TO START
+========================= */
+
+.start{
+    position:absolute;
+    inset:0;
+    z-index:50;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        radial-gradient(circle,
+        rgba(120,20,0,.4),
+        #210000 75%);
+    transition:opacity 1s ease;
+}
+
+.start.hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+.start-box{
+    text-align:center;
+    padding:30px;
+}
+
+.start-title{
+    font-size:30px;
+    color:#ffd76b;
+    margin-bottom:18px;
+}
+
+.start-sub{
+    color:#ead29b;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.start-btn{
+    border:1px solid #e6bb58;
+    background:transparent;
+    color:#ffd76b;
+    padding:13px 30px;
+    border-radius:30px;
+    font-family:inherit;
+    font-size:17px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:380px){
+
+    .screen{
+        padding:40px 24px;
+    }
+
+    .quote{
+        font-size:18px;
+    }
+
+    .location{
+        font-size:18px;
+    }
+
+    .name{
+        font-size:39px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="invitation" id="invitation">
+
+    <!-- START SCREEN -->
+    <div class="start" id="start">
+        <div class="start-box">
+            <div class="diya">
+                <div class="flame"></div>
+            </div>
+
+            <div class="start-title">
+                వివాహ ఆహ్వానం
+            </div>
+
+            <div class="start-sub">
+                Madhu ❤️ Nandhu
+            </div>
+
+            <button class="start-btn" onclick="startInvitation()">
+                ఆహ్వానాన్ని తెరవండి
+            </button>
+        </div>
+    </div>
+
+
+    <!-- SCREEN 1 -->
+    <section class="screen" id="screen1">
+        <div class="ornament top"></div>
+        <div class="ornament bottom"></div>
+
+        <div class="content">
+            <div class="s1-text gold reveal">
+                శ్రీరస్తు<br>
+                • శుభమస్తు •<br>
+                అవిఘ్నమస్తు
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SCREEN 2 -->
+    <section class="screen" id="screen2">
+        <div class="content">
+
+            <div class="ganesha reveal">
+                🪷
+            </div>
+
+            <div class="ganesha-text gold reveal delay1">
+                శ్రీ గణేశాయ నమః
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SCREEN 3 -->
+    <section class="screen" id="screen3">
+        <div class="content">
+
+            <div class="quote gold reveal">
+                “రెండు మనసులు…<br>
+                ఒకటై నడిచే జీవిత ప్రయాణానికి<br>
+                మీ ఆశీర్వాదమే మా తొలి అడుగు.”
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SCREEN 4 -->
+    <section class="screen" id="screen4">
+        <div class="content">
+
+            <div class="flower reveal">
+                💐
+            </div>
+
+            <div class="big gold reveal delay1">
+                వివాహ మహోత్సవం
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SCREEN 5 -->
+    <section class="screen" id="screen5">
+        <div class="content">
+
+            <div class="label reveal">
+                వధువు
+            </div>
+
+            <div class="name reveal delay1">
+                MADHU
+            </div>
+
+            <div class="amp reveal delay2">
+                &
+            </div>
+
+            <div class="label reveal delay3">
+                వరుడు
+            </div>
+
+            <div class="name reveal delay4">
+                NANDHU
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SCREEN 6 -->
+    <section class="screen" id="screen6">
+        <div class="content">
+
+            <div class="date gold reveal">
+                ఆదివారం,<br>
+                07 ఫిబ్రవరి 2027
+            </div>
+
+            <div class="time reveal delay2">
+                🕚 ఉదయం 11:11 గంటలకు
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SCREEN 7 -->
+    <section class="screen" id="screen7">
+        <div class="content">
+
+            <div class="location gold reveal">
+                📍 మధు పటేల్ పుడారి<br>
+                హజీపూర్, తెలంగాణ
+            </div>
+
+            <div class="final reveal delay2">
+                “మీ రాక…<br>
+                మా జీవితంలోని మరపురాని ఆశీర్వాదం.” ❤️
+            </div>
+
+            <a class="map-btn reveal delay3"
+               href="https://www.google.com/maps/search/?api=1&query=V883%2BRP%20Hajipur%2C%20Telangana"
+               target="_blank">
+                📍 Open Google Maps
+            </a>
+
+        </div>
+    </section>
+
+</div>
+
+
+<script>
+
+const screens = document.querySelectorAll(".screen");
+let current = 0;
+let timer = null;
+
+const screenTime = 4500;
+
+function showScreen(index){
+
+    screens.forEach((screen)=>{
+        screen.classList.remove("active");
+    });
+
+    current = index;
+
+    setTimeout(()=>{
+        screens[current].classList.add("active");
+    },100);
+}
+
+
+function nextScreen(){
+
+    if(current < screens.length - 1){
+
+        showScreen(current + 1);
+
+        timer = setTimeout(
+            nextScreen,
+            screenTime
+        );
+
+    }else{
+
+        // Invitation completed
+        clearTimeout(timer);
+
+    }
+}
+
+
+function startInvitation(){
+
+    const start = document.getElementById("start");
+
+    start.classList.add("hide");
+
+    // First screen
+    showScreen(0);
+
+    // Start automatic sequence
+    timer = setTimeout(
+        nextScreen,
+        screenTime
+    );
+
+    createPetals();
+
+    // Try background music after user interaction
+    const music = document.getElementById("weddingMusic");
+
+    if(music){
+        music.play().catch(()=>{});
+    }
+}
+
+
+/* =========================
+   PETALS
+========================= */
+
+function createPetals(){
+
+    const container =
+        document.getElementById("invitation");
+
+    for(let i=0;i<24;i++){
+
+        const petal =
+            document.createElement("span");
+
+        petal.className="petal";
+
+        petal.style.left =
+            Math.random()*100+"%";
+
+        petal.style.animationDuration =
+            (5 + Math.random()*6)+"s";
+
+        petal.style.animationDelay =
+            Math.random()*6+"s";
+
+        petal.style.transform =
+            `rotate(${Math.random()*360}deg)`;
+
+        container.appendChild(petal);
+    }
+}
+
+</script>
+
+</body>
+</html>
